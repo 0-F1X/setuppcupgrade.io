@@ -1530,3 +1530,11 @@ section {
   font-size: 13px;
   color: #364146;
 }
+
+/* Media queries pour cibler les appareils mobiles */
+@media screen and (max-width: 768px) {
+  /* Appliquer l'effet de transition uniquement aux éléments avec la classe 'swiper-slide-mobile' */
+  .swiper-slide-mobile {
+    transition: transform 0.5s ease; /* Par exemple, une transition de transformation */
+  }
+}
