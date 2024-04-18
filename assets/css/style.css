@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+/* Appliquer la police Poppins au corps de la page */
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Poppins', sans-serif;
   color: #444444;
 }
 
@@ -20,7 +23,7 @@ h4,
 h5,
 h6 {
   font-family: "Raleway", sans-serif;
-} 
+}
 
 /* Personnalisation de la barre de défilement */
 ::-webkit-scrollbar {
@@ -1533,8 +1536,10 @@ section {
 
 /* Media queries pour cibler les appareils mobiles */
 @media screen and (max-width: 768px) {
+
   /* Appliquer l'effet de transition uniquement aux éléments avec la classe 'swiper-slide-mobile' */
   .swiper-slide-mobile {
-    transition: transform 0.5s ease; /* Par exemple, une transition de transformation */
+    transition: transform 0.5s ease;
+    /* Par exemple, une transition de transformation */
   }
 }
