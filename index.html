@@ -117,25 +117,39 @@
 
     <section id="team" class="team">
       <div class="container" data-aos="fade-up">
-        <header class="section-header text-center">
-          <h2>Les meilleurs PC gaming</h2>
-          <p>Préfabriqués et personnalisés</p>
+        <header class="section-header d-flex justify-content-between align-items-center">
+          <div class="text-center">
+            <h2>Les meilleurs PC gaming</h2>
+            <p>Préfabriqués et personnalisés</p>
+          </div>
+          <!-- Bouton dropdown -->
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Choix de gamme
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <li><a class="dropdown-item" href="#" data-gamme="Entree de Gamme">Entrée de gamme</a></li>
+              <li><a class="dropdown-item" href="#" data-gamme="Milieu de Gamme">Milieu de gamme</a></li>
+              <li><a class="dropdown-item" href="#" data-gamme="Haut de Gamme">Haut de gamme</a></li>
+            </ul>
+          </div>
         </header>
 
         <div class="swiper-slide swiper-slide-mobile">
           <div class="team-slider swiper">
             <div class="swiper-wrapper align-items-stretch">
-              <div class="swiper-slide">
+              <div class="swiper-slide" data-gamme="Entree de Gamme">
                 <div class="member border p-3 shadow-sm rounded-top">
                   <div class="member-img">
                     <img src="./assets/img/setup/1.png" class="img-fluid" alt="">
                   </div>
                   <div class="member-info">
                     <br>
-                    <span>AMD RYZEN 9 7900X CPU</span> <br>
-                    <span>RX 6900XT 16GB</span> <br>
+                    <span>AMD RYZEN 5 5600G</span> <br>
+                    <span>RX 590 8GB</span> <br>
                     <span>2TB M.2 Nvme SSD</span> <br>
-                    <span>32GB DDR4 RAM</span> <br>
+                    <span>RAM 16GB DDR4</span> <br>
                   </div>
                 </div>
                 <div class="member-price border p-3 shadow-sm rounded-bottom"
@@ -147,15 +161,15 @@
                 </div>
               </div>
 
-              <div class="swiper-slide">
+              <div class="swiper-slide" data-gamme="Milieu de Gamme">
                 <div class="member border p-3 shadow-sm  rounded-top">
                   <div class="member-img">
                     <img src="./assets/img/setup/2.png" class="img-fluid" alt="">
                   </div>
                   <div class="member-info">
                     <br>
-                    <span>AMD RYZEN 9 7900X CPU</span> <br>
-                    <span>RX 6900XT 16GB</span> <br>
+                    <span>Core i5 6600</span> <br>
+                    <span>GTX 1660 Super</span> <br>
                     <span>2TB M.2 Nvme SSD</span> <br>
                     <span>32GB DDR4 RAM</span> <br>
                   </div>
@@ -169,7 +183,7 @@
                 </div>
               </div>
 
-              <div class="swiper-slide">
+              <div class="swiper-slide" data-gamme="Entree de Gamme">
                 <div class="member border p-3 shadow-sm  rounded-top">
                   <div class="member-img">
                     <img src="./assets/img/setup/3.png" class="img-fluid" alt="">
@@ -191,7 +205,7 @@
                 </div>
               </div>
 
-              <div class="swiper-slide">
+              <div class="swiper-slide" data-gamme="Haut de Gamme">
                 <div class="member border p-3 shadow-sm  rounded-top">
                   <div class="member-img">
                     <img src="./assets/img/setup/4.png" class="img-fluid" alt="">
@@ -213,7 +227,7 @@
                 </div>
               </div>
 
-              <div class="swiper-slide">
+              <div class="swiper-slide" data-gamme="Entree de Gamme">
                 <div class="member border p-3 shadow-sm  rounded-top">
                   <div class="member-img">
                     <img src="./assets/img/setup/5.png" class="img-fluid" alt="">
@@ -234,7 +248,7 @@
                       class="fas fa-shopping-cart"></i></i>Commander</button>
                 </div>
               </div>
-              <div class="swiper-slide">
+              <div class="swiper-slide" data-gamme="Milieu de Gamme">
                 <div class="member border p-3 shadow-sm  rounded-top">
                   <div class="member-img">
                     <img src="./assets/img/setup/6.png" class="img-fluid" alt="">
@@ -361,6 +375,34 @@
           slidesPerView: 4,
         },
       },
+    });
+  </script>
+  <script>
+    // Assurez-vous que le DOM est chargé avant d'exécuter le code
+    document.addEventListener('DOMContentLoaded', function () {
+      // Récupérer tous les éléments de liste du menu déroulant
+      const dropdownItems = document.querySelectorAll('.dropdown-item');
+
+      // Ajouter un événement de clic à chaque élément de liste
+      dropdownItems.forEach(function (item) {
+        item.addEventListener('click', function (event) {
+          event.preventDefault(); // Empêche le comportement par défaut du lien
+          const selectedGamme = item.getAttribute('data-gamme'); // Récupérer la gamme sélectionnée
+
+          // Filtrer les produits en fonction de la gamme sélectionnée
+          const slides = document.querySelectorAll('.swiper-slide');
+          slides.forEach(function (slide) {
+            const slideGamme = slide.getAttribute('data-gamme');
+
+            // Afficher ou masquer les slides selon la gamme sélectionnée
+            if (slideGamme === selectedGamme) {
+              slide.style.display = 'none';
+            } else {
+              slide.style.display = 'block';
+            }
+          });
+        });
+      });
     });
   </script>
 
