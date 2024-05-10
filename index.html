@@ -126,17 +126,17 @@
             <p>Préfabriqués et personnalisés</p>
           </div>
           <!-- Bouton dropdown -->
-          <div class="dropdown">
+          <!--   <div class="dropdown">
             <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
               data-bs-toggle="dropdown" aria-expanded="false">
               Choix de gamme
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <li><a class="dropdown-item" href="#" data-gamme="Entree de Gamme">Entree de gamme</a></li>
-              <li><a class="dropdown-item" href="#" data-gamme="Milieu de Gamme">Milieu de gamme</a></li>
-              <li><a class="dropdown-item" href="#" data-gamme="Haut de Gamme">Haut de gamme</a></li>
+              <li><a class="dropdown-item" href="#" onclick="filterGamme('Entree de Gamme')">Entree de gamme</a></li>
+              <li><a class="dropdown-item" href="#" onclick="filterGamme('Milieu de Gamme')">Milieu de gamme</a></li>
+              <li><a class="dropdown-item" href="#" onclick="filterGamme('Haut de Gamme')">Haut de gamme</a></li>
             </ul>
-          </div>
+          </div> -->
         </header>
 
         <div class="swiper-slide swiper-slide-mobile">
@@ -149,22 +149,23 @@
                   </div>
                   <div class="member-info">
                     <br>
-                    <span>AMD RYZEN 5 5600G</span> <br>
+                    <span>AMD RYZEN 5 3600</span> <br>
                     <span>RX 590 8GB</span> <br>
-                    <span>2TB M.2 Nvme SSD</span> <br>
-                    <span>RAM 16GB DDR4</span> <br>
+                    <span>SSD 512GB SATA</span> <br>
+                    <span>RAM 8GB DDR4</span> <br>
                   </div>
                 </div>
                 <div class="member-price border p-3 shadow-sm rounded-bottom"
                   style="background-color: rgba(128, 125, 122, 0.189);">
-                  <p style="font-weight: bolder;"><i class="fas fa-euro-sign" style="color: green;"></i> 3.750.000 Ar</p>
+                  <p style="font-weight: bolder;"><i class="fas fa-euro-sign" style="color: green;"></i> 2.390.000 Ar
+                  </p>
                   <p style="font-size: 12px;">Livraison partout à Madagascar. <i class="fas fa-truck"></i> </p>
                   <button class="btn btn-danger btn-sm sm mx-auto d-block commanderBtn"><i
                       class="fas fa-shopping-cart"></i></i> Commander</button>
                 </div>
               </div>
 
-              <div class="swiper-slide" data-gamme="Milieu de Gamme">
+              <div class="swiper-slide" data-gamme="Entree de Gamme">
                 <div class="member border p-3 shadow-sm  rounded-top">
                   <div class="member-img">
                     <img src="./assets/img/setup/2.png" class="img-fluid" alt="">
@@ -173,20 +174,21 @@
                     <br>
                     <span>Core i5 6600</span> <br>
                     <span>GTX 1660 Super</span> <br>
-                    <span>2TB M.2 Nvme SSD</span> <br>
-                    <span>RAM 16GB DDR4</span> <br>
+                    <span>SSD 512GB SATA</span> <br>
+                    <span>RAM 8GB DDR4</span> <br>
                   </div>
                 </div>
                 <div class="member-price border p-3 shadow-sm rounded-bottom"
                   style="background-color: rgba(128, 125, 122, 0.189);">
-                  <p style="font-weight: bolder;"><i class="fas fa-euro-sign" style="color: green;"></i> 3.750.000 Ar</p>
+                  <p style="font-weight: bolder;"><i class="fas fa-euro-sign" style="color: green;"></i> 1.895.000 Ar
+                  </p>
                   <p style="font-size: 12px;">Livraison partout à Madagascar. <i class="fas fa-truck"></i> </p>
                   <button class="btn btn-danger btn-sm sm mx-auto d-block commanderBtn"><i
                       class="fas fa-shopping-cart"></i></i> Commander</button>
                 </div>
               </div>
 
-              <div class="swiper-slide" data-gamme="Entree de Gamme">
+              <div class="swiper-slide" data-gamme="Milieu de Gamme">
                 <div class="member border p-3 shadow-sm  rounded-top">
                   <div class="member-img">
                     <img src="./assets/img/setup/3.png" class="img-fluid" alt="">
@@ -195,20 +197,21 @@
                     <br>
                     <span>AMD RYZEN 5 5600G</span> <br>
                     <span>RX 6600 GIGABYTE</span> <br>
-                    <span>2TB M.2 Nvme SSD</span> <br>
+                    <span>SSD 512GB SATA</span> <br>
                     <span>RAM 16GB DDR4</span> <br>
                   </div>
                 </div>
                 <div class="member-price border p-3 shadow-sm rounded-bottom"
                   style="background-color: rgba(128, 125, 122, 0.189);">
-                  <p style="font-weight: bolder;"><i class="fas fa-euro-sign" style="color: green;"></i> 3.750.000 Ar</p>
+                  <p style="font-weight: bolder;"><i class="fas fa-euro-sign" style="color: green;"></i> 3.750.000 Ar
+                  </p>
                   <p style="font-size: 12px;">Livraison partout à Madagascar. <i class="fas fa-truck"></i> </p>
                   <button class="btn btn-danger btn-sm sm mx-auto d-block commanderBtn"><i
                       class="fas fa-shopping-cart"></i></i> Commander</button>
                 </div>
               </div>
 
-              <div class="swiper-slide" data-gamme="Haut de Gamme">
+              <div class="swiper-slide" data-gamme="Milieu de Gamme">
                 <div class="member border p-3 shadow-sm  rounded-top">
                   <div class="member-img">
                     <img src="./assets/img/setup/4.png" class="img-fluid" alt="">
@@ -217,20 +220,27 @@
                     <br>
                     <span>Core i5 10400F</span> <br>
                     <span>RTX 2060</span> <br>
-                    <span>Viper 1TB</span> <br>
+                    <span>SSD 512GB SATA</span> <br>
                     <span>RAM 16GB DDR4</span> <br>
                   </div>
                 </div>
                 <div class="member-price border p-3 shadow-sm rounded-bottom"
                   style="background-color: rgba(128, 125, 122, 0.189);">
-                  <p style="font-weight: bolder;"><i class="fas fa-euro-sign" style="color: green;"></i> 3.750.000 Ar</p>
+                  <p style="font-weight: bolder;"><i class="fas fa-euro-sign" style="color: green;"></i> 2.818.000 Ar
+                  </p>
                   <p style="font-size: 12px;">Livraison partout à Madagascar. <i class="fas fa-truck"></i> </p>
                   <button class="btn btn-danger btn-sm sm mx-auto d-block commanderBtn"><i
                       class="fas fa-shopping-cart"></i></i> Commander</button>
                 </div>
               </div>
 
-              <div class="swiper-slide" data-gamme="Entree de Gamme">
+              <style>
+                .d-none {
+                  display: none !important;
+                }
+              </style>
+
+              <div class="swiper-slide" data-gamme="Haut de Gamme">
                 <div class="member border p-3 shadow-sm  rounded-top">
                   <div class="member-img">
                     <img src="./assets/img/setup/5.png" class="img-fluid" alt="">
@@ -239,19 +249,20 @@
                     <br>
                     <span>AMD RYZEN 5 7600X</span> <br>
                     <span>RX 6800XT</span> <br>
-                    <span>2TB M.2 Nvme SSD</span> <br>
-                    <span>RAM 16GB DDR4</span> <br>
+                    <span>SSD 2TB Nvme</span> <br>
+                    <span>RAM 32GB DDR5</span> <br>
                   </div>
                 </div>
                 <div class="member-price border p-3 shadow-sm rounded-bottom"
                   style="background-color: rgba(128, 125, 122, 0.189);">
-                  <p style="font-weight: bolder;"><i class="fas fa-euro-sign" style="color: green;"></i> 3.750.000 Ar</p>
+                  <p style="font-weight: bolder;"><i class="fas fa-euro-sign" style="color: green;"></i> 8.005.000 Ar
+                  </p>
                   <p style="font-size: 12px;">Livraison partout à Madagascar. <i class="fas fa-truck"></i> </p>
                   <button class="btn btn-danger btn-sm sm mx-auto d-block commanderBtn"><i
                       class="fas fa-shopping-cart"></i></i> Commander</button>
                 </div>
               </div>
-              <div class="swiper-slide" data-gamme="Milieu de Gamme">
+              <div class="swiper-slide" data-gamme="Haut de Gamme">
                 <div class="member border p-3 shadow-sm  rounded-top">
                   <div class="member-img">
                     <img src="./assets/img/setup/6.png" class="img-fluid" alt="">
@@ -260,13 +271,14 @@
                     <br>
                     <span>Core i7 13700K</span> <br>
                     <span>RTX 4070</span> <br>
-                    <span>2TB M.2 Nvme SSD</span> <br>
-                    <span>32GB DDR4 RAM</span> <br>
+                    <span>SSD 2TB Nvme</span> <br>
+                    <span>64GB DDR5 RAM</span> <br>
                   </div>
                 </div>
                 <div class="member-price border p-3 shadow-sm rounded-bottom"
                   style="background-color: rgba(128, 125, 122, 0.189);">
-                  <p style="font-weight: bolder;"><i class="fas fa-euro-sign" style="color: green;"></i> 3.750.000 Ar</p>
+                  <p style="font-weight: bolder;"><i class="fas fa-euro-sign" style="color: green;"></i> 10.345.000 Ar
+                  </p>
                   <p style="font-size: 12px;">Livraison partout à Madagascar. <i class="fas fa-truck"></i> </p>
                   <button class="btn btn-danger btn-sm sm mx-auto d-block commanderBtn"><i
                       class="fas fa-shopping-cart"></i></i> Commander</button>
@@ -316,7 +328,8 @@
             <h4>Liens Externe</h4>
             <ul>
               <li><i class="bx bx-chevron-right"></i> <a href="https://pcupgrade.mg/">pcupgrade.mg</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="https://www.facebook.com/PCUPGRADEMADA">facebook/PCUPGRADEMADA</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a
+                  href="https://www.facebook.com/PCUPGRADEMADA">facebook/PCUPGRADEMADA</a></li>
             </ul>
           </div>
 
@@ -337,7 +350,8 @@
 
     <div class="container">
       <div class="copyright">
-        &copy; Copyright <strong><span><a href="https://www.facebook.com/profile.php?id=61553713605738" style="color: gray;">ZeroFynx</a></span></strong> - Touts Droits résérvées
+        &copy; Copyright <strong><span><a href="https://www.facebook.com/profile.php?id=61553713605738"
+              style="color: gray;">ZeroFynx</a></span></strong> - Touts Droits résérvées
       </div>
     </div>
   </footer><!-- End Footer -->
@@ -381,34 +395,20 @@
       },
     });
   </script>
-  <script>
-    // Assurez-vous que le DOM est chargé avant d'exécuter le code
-    document.addEventListener('DOMContentLoaded', function () {
-      // Récupérer tous les éléments de liste du menu déroulant
-      const dropdownItems = document.querySelectorAll('.dropdown-item');
+  <!-- <script>
+    function filterGamme(selectedGamme) {
+      const slides = document.querySelectorAll('.swiper-slide');
+      slides.forEach(function (slide) {
+        const slideGamme = slide.getAttribute('data-gamme');
 
-      // Ajouter un événement de clic à chaque élément de liste
-      dropdownItems.forEach(function (item) {
-        item.addEventListener('click', function (event) {
-          event.preventDefault(); // Empêche le comportement par défaut du lien
-          const selectedGamme = item.getAttribute('data-gamme'); // Récupérer la gamme sélectionnée
-
-          // Filtrer les produits en fonction de la gamme sélectionnée
-          const slides = document.querySelectorAll('.swiper-slide');
-          slides.forEach(function (slide) {
-            const slideGamme = slide.getAttribute('data-gamme');
-
-            // Afficher ou masquer les slides selon la gamme sélectionnée
-            if (slideGamme === selectedGamme) {
-              slide.style.display = 'none';
-            } else {
-              slide.style.display = 'block';
-            }
-          });
-        });
+        if (slideGamme === selectedGamme) {
+          slide.style.display = 'block';
+        } else {
+          slide.style.display = 'none';
+        }
       });
-    });
-  </script>
+    }
+  </script> -->
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/particle/particles.js"></script>
